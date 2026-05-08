@@ -1,0 +1,20 @@
+{
+  "name": "demo-day-coach",
+  "version": "1.0.0",
+  "description": "Coach founders end-to-end through demo day pitch and deck preparation. Script first, slide copy second, design spec third — never the other way around.",
+  "author": {
+    "name": "Andres Barreto",
+    "url": "https://github.com/andresbarreto-techstars"
+  },
+  "homepage": "https://github.com/andresbarreto-techstars/demo-day-coach",
+  "repository": "https://github.com/andresbarreto-techstars/demo-day-coach",
+  "license": "MIT",
+  "keywords": [
+    "demo-day",
+    "pitch",
+    "fundraising",
+    "founders",
+    "investors",
+    "deck"
+  ]
+}

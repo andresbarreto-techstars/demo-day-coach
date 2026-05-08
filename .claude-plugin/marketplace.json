@@ -1,0 +1,24 @@
+{
+  "name": "demo-day-coach",
+  "owner": {
+    "name": "Andres Barreto",
+    "url": "https://github.com/andresbarreto-techstars"
+  },
+  "plugins": [
+    {
+      "name": "demo-day-coach",
+      "source": ".",
+      "description": "Coach founders end-to-end through demo day pitch and deck preparation. Script first, slide copy second, design spec third — never the other way around.",
+      "version": "1.0.0",
+      "category": "founders",
+      "tags": [
+        "demo-day",
+        "pitch",
+        "fundraising",
+        "founders",
+        "investors",
+        "deck"
+      ]
+    }
+  ]
+}

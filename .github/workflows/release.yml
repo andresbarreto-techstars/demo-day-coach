@@ -1,0 +1,41 @@
+name: Publish skill zip
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/demo-day-coach/**'
+      - '.github/workflows/release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build skill zip
+        run: |
+          cd skills
+          zip -r ../demo-day-coach.zip demo-day-coach
+          ls -la ../demo-day-coach.zip
+
+      - name: Publish 'latest' release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: demo-day-coach (latest)
+          body: |
+            Always-fresh `demo-day-coach.zip` built from the latest commit on `main`.
+
+            **Non-technical install:**
+            1. Download `demo-day-coach.zip` below.
+            2. Open Claude → Settings → Capabilities → Skills.
+            3. Click **Add skill** (or **Upload skill**) and choose `demo-day-coach.zip`.
+
+            That's it. To update later, come back to this page, download the latest zip, and re-upload.
+          files: demo-day-coach.zip
+          make_latest: 'true'
